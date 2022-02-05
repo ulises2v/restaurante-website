@@ -27,10 +27,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    height: 300vh;
-}
-
 /* header */
 
 header {
@@ -100,6 +96,69 @@ header .icons #menu-bars {
     display: none;
 }
 
+/* search form */
+
+#search-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+#search-form.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#search-form #search-box {
+    background: none;
+    border-bottom: .1rem solid var(--white);
+    padding: 1rem 0;
+    color: var(--white);
+    font-size: 3rem;
+    text-transform: none;
+}
+
+#search-form #search-box::placeholder {
+    color: rgb(78, 141, 99);
+}
+
+#search-form #search-box::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+#search-form label {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+#search-form label:hover {
+    color: var(--green);
+    transform: rotate(360deg);
+}
+
+#search-form #close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 4rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+#search-form #close:hover {
+    color: var(--green);
+    transform: rotate(360deg);
+}
+
 /* -------------------------------------------------------- */
 /* media queries */
 
@@ -138,5 +197,9 @@ header .icons #menu-bars {
         padding: 1.5rem;
         margin: 1rem;
         background: #eee;
+    }
+
+    #search-form #search-box {
+        width: 80%;
     }
 }
