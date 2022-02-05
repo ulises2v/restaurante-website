@@ -1,0 +1,8 @@
+Mr. Web Designer
+https://www.youtube.com/watch?v=MJUssi2c6Ls
+
+font-awesome
+https://cdnjs.com/libraries/font-awesome
+
+Swiper
+https://swiperjs.com/
