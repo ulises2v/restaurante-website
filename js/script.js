@@ -44,7 +44,3 @@ var swiper = new Swiper(".home-slider", {
     },
     loop: true,
   });
-
-  // active navbar
-
-  const links = document.querySelectorAll('.navbar a');
