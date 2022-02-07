@@ -318,9 +318,8 @@ header .icons #menu-bars {
 
 .dishes .box-container .box span {
     color: var(--green);
-    font-weight: bolder;
     margin-right: 1rem;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 /* about */
@@ -473,6 +472,115 @@ header .icons #menu-bars {
     margin-left: 1rem;
 }
 
+/* review */
+
+.review .slide {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border: .1rem solid rgba(0, 0, 0, .2);
+    border-radius: .5rem;
+    position: relative;
+}
+
+.review .slide .fa-quote-right {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 6rem;
+    color: #ccc;
+}
+
+.review .slide .user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.review .slide .user img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .slide .user h3 {
+    color: var(--black);
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
+.review .slide .user i {
+    font-size: 1.3rem;
+    color: var(--green);
+}
+
+.review .slide p {
+    font-size: 1.5rem;
+    color: var(--ligth-color);
+    line-height: 1.5;
+}
+
+/* order */
+
+.order form {
+    max-width: 90rem;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.order form .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.order form .inputBox .input {
+    width: 49%;
+}
+
+.order form .inputBox .input span {
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+.order form .inputBox .input input,
+.order form .inputBox .input textarea {
+    background-color: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    /* color: var(--black); */
+    text-transform: none;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.order form .inputBox .input input::placeholder,
+.order form .inputBox .input textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.order form .inputBox .input input:focus,
+.order form .inputBox .input textarea:focus {
+    background-color: #e9fff2;
+}
+
+.order form .inputBox .input textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.order form .btn {
+    margin-top: 0;
+}
+
 /* -------------------------------------------------------- */
 /* media queries */
 
@@ -488,9 +596,18 @@ header .icons #menu-bars {
     section {
         padding: 2rem;
     }
+}
 
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
     .dishes .box-container .box {
         height: auto;
+        width: 100%;
+    }
+
+    .order form .inputBox .input {
         width: 100%;
     }
 }
